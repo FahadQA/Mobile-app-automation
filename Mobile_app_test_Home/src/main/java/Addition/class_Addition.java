@@ -1,3 +1,5 @@
+package Addition;
+
 import java.net.URL;
 
 import org.openqa.selenium.By;
@@ -6,14 +8,14 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class Calculator {
+public class class_Addition {
 	
 	static AppiumDriver<MobileElement> driver;
 	
-	public void Sum_in_Calculator() throws Exception 
+	public void Addition_Functionality() throws Exception 
 	{
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setCapability("deviceName", "SM-A505F"); 
+		cap.setCapability("deviceName", "SM-A505F");
 		cap.setCapability("udid", "R58M845XNZR");
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("paltformVersion", "9");
@@ -56,7 +58,21 @@ public class Calculator {
 		
 		
 	}
-
-
+	
+	public void Addition_Exicution()
+	{
+		try {
+			Addition_Functionality();
+	       }catch(Exception exp)
+	       {
+	    	   System.out.println(exp.getCause());
+	    	   System.out.println(exp.getMessage());
+	    	   exp.printStackTrace(); 
+	       }
+		
+		
+	}
+	
+	
 
 }
