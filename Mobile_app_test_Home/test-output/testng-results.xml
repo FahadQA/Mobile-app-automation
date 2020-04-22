@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="42043" started-at="2020-04-22T07:47:00 PDT" finished-at="2020-04-22T07:47:42 PDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="42043" started-at="2020-04-22T07:47:00 PDT" finished-at="2020-04-22T07:47:42 PDT">
+      <class name="Addition_Run_Class.class_Addition_Run_Class">
+        <test-method status="PASS" signature="run_class_Addition()[pri:0, instance:Addition_Run_Class.class_Addition_Run_Class@3b084709]" name="run_class_Addition" duration-ms="41962" started-at="2020-04-22T07:47:00 PDT" finished-at="2020-04-22T07:47:42 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run_class_Addition -->
+      </class> <!-- Addition_Run_Class.class_Addition_Run_Class -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
