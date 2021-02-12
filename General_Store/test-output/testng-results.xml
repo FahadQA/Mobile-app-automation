@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="16316" started-at="2021-02-11T17:47:01 BDT" finished-at="2021-02-11T17:47:17 BDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="16316" started-at="2021-02-11T17:47:01 BDT" finished-at="2021-02-11T17:47:17 BDT">
+      <class name="Run_Class.Test_Case_01_Run_Class">
+        <test-method status="PASS" signature="Base_Class_Run()[pri:0, instance:Run_Class.Test_Case_01_Run_Class@2d8f65a4]" name="Base_Class_Run" is-config="true" duration-ms="14865" started-at="2021-02-11T17:47:01 BDT" finished-at="2021-02-11T17:47:16 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Base_Class_Run -->
+        <test-method status="PASS" signature="Test_Case_01_Run()[pri:0, instance:Run_Class.Test_Case_01_Run_Class@2d8f65a4]" name="Test_Case_01_Run" duration-ms="1387" started-at="2021-02-11T17:47:16 BDT" finished-at="2021-02-11T17:47:17 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Case_01_Run -->
+      </class> <!-- Run_Class.Test_Case_01_Run_Class -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
