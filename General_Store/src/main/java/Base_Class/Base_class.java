@@ -33,5 +33,19 @@ public class Base_class {
 		System.out.println("Application starting . . . ");
 		
 	}
+	
+	public void Base_Class_Exception() 
+	{
+		
+				try {
+					 Basic_Functionality();
+			       }catch(Exception exp)
+			       {
+			    	   System.out.println(exp.getCause());
+			    	   System.out.println(exp.getMessage());
+			    	   exp.printStackTrace(); 
+			       }
+
+   }
 
 }

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16316" started-at="2021-02-11T17:47:01 BDT" finished-at="2021-02-11T17:47:17 BDT">
+  <suite name="Default suite" duration-ms="31637" started-at="2021-02-15T16:37:10 BDT" finished-at="2021-02-15T16:37:42 BDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16316" started-at="2021-02-11T17:47:01 BDT" finished-at="2021-02-11T17:47:17 BDT">
-      <class name="Run_Class.Test_Case_01_Run_Class">
-        <test-method status="PASS" signature="Base_Class_Run()[pri:0, instance:Run_Class.Test_Case_01_Run_Class@2d8f65a4]" name="Base_Class_Run" is-config="true" duration-ms="14865" started-at="2021-02-11T17:47:01 BDT" finished-at="2021-02-11T17:47:16 BDT">
+    <test name="Default test" duration-ms="31637" started-at="2021-02-15T16:37:10 BDT" finished-at="2021-02-15T16:37:42 BDT">
+      <class name="Run_Class.Test_Case_Run_Class">
+        <test-method status="PASS" signature="Base_Class_Run()[pri:0, instance:Run_Class.Test_Case_Run_Class@2d8f65a4]" name="Base_Class_Run" is-config="true" duration-ms="14711" started-at="2021-02-15T16:37:10 BDT" finished-at="2021-02-15T16:37:25 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Base_Class_Run -->
-        <test-method status="PASS" signature="Test_Case_01_Run()[pri:0, instance:Run_Class.Test_Case_01_Run_Class@2d8f65a4]" name="Test_Case_01_Run" duration-ms="1387" started-at="2021-02-11T17:47:16 BDT" finished-at="2021-02-11T17:47:17 BDT">
+        <test-method status="PASS" signature="Test_Case_03_Run()[pri:0, instance:Run_Class.Test_Case_Run_Class@2d8f65a4]" name="Test_Case_03_Run" duration-ms="16857" started-at="2021-02-15T16:37:25 BDT" finished-at="2021-02-15T16:37:42 BDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test_Case_01_Run -->
-      </class> <!-- Run_Class.Test_Case_01_Run_Class -->
+        </test-method> <!-- Test_Case_03_Run -->
+      </class> <!-- Run_Class.Test_Case_Run_Class -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -9,7 +9,7 @@ import Base_Class.Base_class;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 
-public class Test_Case_01 extends Base_class {
+public class Test_Case_01 extends Base_class{
 	
 	
 
@@ -35,30 +35,27 @@ public class Test_Case_01 extends Base_class {
 		
 		
 		
-//		NameTextField.sendKeys("hello");
-//		System.out.println("hello");
-//		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-//		
-//		FemaleRadiobutton.click();
-//		System.out.println("geneder selected");
-//		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-//		
-//		CountryDropDownButton.click();
-//		System.out.println("DropDownButton clicked");
-//		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-//		
-//		MobileElement selectCountry = driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textMatches(\""+"Australia"+ "\").instance(0))"));
-//		selectCountry.click();
-//		System.out.println("country selected");
-//		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-//		
+		NameTextField.sendKeys("hello");
+		System.out.println("hello");
+		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		
+		FemaleRadiobutton.click();
+		System.out.println("geneder selected");
+		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		
+		CountryDropDownButton.click();
+		System.out.println("DropDownButton clicked");
+		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		
+		MobileElement selectCountry = driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textMatches(\""+"Australia"+ "\").instance(0))"));
+		selectCountry.click();
+		System.out.println("country selected");
+		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		
 		letsShopButton.click();		
 		System.out.println("letsShopButton clicked");
 		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-		String ToastMessage = driver.findElement(By.xpath("//android.widget.Toast[1]")).getAttribute("name");
-		System.out.println(ToastMessage);
-		Assert.assertEquals(ToastMessage, "Please enter your name");
-		
+
 
 		
 		
