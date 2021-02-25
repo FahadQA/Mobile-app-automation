@@ -54,6 +54,8 @@ public class Test_Case_05 extends Base_class {
 		//int count = driver.findElements(By.id("com.androidsample.generalstore:id/productName")).size();
 		driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
 		driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
+		MobileElement radioGroup =driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.androidsample.generalstore:id/rvProductList\")).scrollIntoView(new UiSelector().textMatches(\""+"Nike Blazer Mid '77"+ "\").instance(0))"));
+		driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
         
 		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		
@@ -63,35 +65,50 @@ public class Test_Case_05 extends Base_class {
 		Thread.sleep(5000L);
 		
 		
-		String amount1 = driver.findElements(By.xpath("//*[@text='$160.97']")).get(0).getText();
-		System.out.println(amount1);
-		amount1 = amount1.substring(1);
-		double price1 = Double.parseDouble(amount1);
-		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+//		String amount1 = driver.findElements(By.xpath("//*[@text='$160.97']")).get(0).getText();
+//		System.out.println(amount1);
+//		double price1 = getAmount(amount1);
+//		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+//		
+//		String amount2 = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(1).getText();
+//		System.out.println(amount2);
+//		double price2 = getAmount(amount2);
 		
-		String amount2 = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(1).getText();
-		System.out.println(amount2);
-		amount2 = amount2.substring(1);
-		double price2 = Double.parseDouble(amount2);
+		int count = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).size();
 		
-		double sumOfproducts = price1 + price2+1;
-		System.out.println(sumOfproducts);
+		double sum = 0;
+		for(int i =0; i<count; i++)
+		{
+			String amount = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(i).getText();
+			System.out.println(amount);
+			double price = getAmount(amount);
+			sum = sum+price;
+			
+		}
+		
+		System.out.println("sum Of products"+sum);
+		
+		
+//		double sumOfproducts = price1 + price2;
+//		System.out.println("sum Of products"+sumOfproducts);
 		
 		String totalPrice = driver.findElement(By.id("com.androidsample.generalstore:id/totalAmountLbl")).getText();
-		System.out.println("total price"+totalPrice);
+		System.out.println("So the total price"+totalPrice);
 		totalPrice = totalPrice.substring(1);
 		double total = Double.parseDouble(totalPrice);
 
-       Assert.assertEquals(sumOfproducts, total);
+       Assert.assertEquals(sum, total);
        System.out.println("matched");
+       
 		
-		
-		
-        
-	   	
-	}
+      }
 	
-
+    public double getAmount(String value)
+    {
+    	value = value.substring(1);
+		double price = Double.parseDouble(value);
+		return price;
+    }
 
 
 	public void Test_Case_05_Functionality_Exception() {
