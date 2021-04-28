@@ -24,7 +24,7 @@ public class Test_Case_02 extends Base_class{
 		Assert.assertEquals(ToastMessage, "Please enter your name");
     }
 	
-	public void Test_Case_01_Functionality_Exception()
+	public void Test_Case_02_Functionality_Exception()
 	{
 		try {
 			Test_Case_02_Functionality();

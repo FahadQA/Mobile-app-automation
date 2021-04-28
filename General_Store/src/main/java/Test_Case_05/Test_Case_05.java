@@ -54,7 +54,7 @@ public class Test_Case_05 extends Base_class {
 		//int count = driver.findElements(By.id("com.androidsample.generalstore:id/productName")).size();
 		driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
 		driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
-		MobileElement radioGroup =driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.androidsample.generalstore:id/rvProductList\")).scrollIntoView(new UiSelector().textMatches(\""+"Nike Blazer Mid '77"+ "\").instance(0))"));
+		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.androidsample.generalstore:id/rvProductList\")).scrollIntoView(new UiSelector().textMatches(\""+"Nike Blazer Mid '77"+ "\").instance(0))"));
 		driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
         
 		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
@@ -74,19 +74,31 @@ public class Test_Case_05 extends Base_class {
 //		System.out.println(amount2);
 //		double price2 = getAmount(amount2);
 		
+		 driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.androidsample.generalstore:id/rvProductList\")).scrollIntoView(new UiSelector().textMatches(\""+"Nike Blazer Mid '77"+ "\").instance(0))"));
+
 		int count = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).size();
-		
+		System.out.println(count);
 		double sum = 0;
 		for(int i =0; i<count; i++)
 		{
-			String amount = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(i).getText();
+			String amount = null;
+			
+				Thread.sleep(5000L);
+					amount = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(i).getText();
+
+				
+			
+//			else
+//			{
+//				 amount = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(i).getText();
+//
+//			}
 			System.out.println(amount);
 			double price = getAmount(amount);
 			sum = sum+price;
-			
 		}
 		
-		System.out.println("sum Of products"+sum);
+		System.out.println("sum Of products:"+ sum);
 		
 		
 //		double sumOfproducts = price1 + price2;

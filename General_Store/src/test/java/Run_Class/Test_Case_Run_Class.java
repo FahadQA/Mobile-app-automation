@@ -8,6 +8,8 @@ import Test_Case_01.Test_Case_01;
 import Test_Case_03.Test_Case_03;
 import Test_Case_04.Test_Case_04;
 import Test_Case_05.Test_Case_05;
+import Test_Case_06.Test_Case_06;
+import raf.raf;
 
 public class Test_Case_Run_Class
 {
@@ -17,7 +19,9 @@ public class Test_Case_Run_Class
 	Test_Case_03 test_case_03 = new Test_Case_03();
 	Test_Case_04 test_case_04 = new Test_Case_04();
 	Test_Case_05 test_case_05 = new Test_Case_05();
-	
+	Test_Case_06 test_case_06 = new Test_Case_06();
+ 
+	raf r = new raf();
 	@BeforeTest
 	public void Base_Class_Run() throws InterruptedException
 	{
@@ -28,7 +32,7 @@ public class Test_Case_Run_Class
 	@Test
 	public void Test_Case_05_Run()
 	{
-		test_case_05.Test_Case_05_Functionality_Exception();
+		r.refrun();
 	}
 	
 }

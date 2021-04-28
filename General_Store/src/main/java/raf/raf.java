@@ -1,6 +1,5 @@
-package Test_Case_03;
+package raf;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -10,11 +9,11 @@ import Base_Class.Base_class;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 
-public class Test_Case_03 extends Base_class {
+public class raf extends Base_class{
 	
-	public void Test_Case_03_Functionality() throws InterruptedException
+	public void testref() throws InterruptedException
 	{
-		 
+		//==== Home page ==== 
 		MobileElement CountryDropDownButton = driver.findElement(By.id("com.androidsample.generalstore:id/spinnerCountry"));
 		MobileElement NameTextField = driver.findElement(By.id("com.androidsample.generalstore:id/nameField"));
 		MobileElement MaleRadiobutton = driver.findElement(By.id("com.androidsample.generalstore:id/radioMale"));
@@ -50,38 +49,44 @@ public class Test_Case_03 extends Base_class {
 		
 		//==== product list screen ====
 		
-		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.androidsample.generalstore:id/rvProductList\")).scrollIntoView(new UiSelector().textMatches(\""+"Jordan 6 Rings"+ "\").instance(0))"));
+		//MobileElement radioGroup =driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.androidsample.generalstore:id/rvProductList\")).scrollIntoView(new UiSelector().textMatches(\""+"Jordan 6 Rings"+ "\").instance(0))"));
 		
-		int count = driver.findElements(By.id("com.androidsample.generalstore:id/productName")).size();
-		
-		for(int i=0; i<=count; i++)
-		{
-			String text = driver.findElements(By.id("com.androidsample.generalstore:id/productName")).get(i).getText();
-			if(text.equals("Jordan 6 Rings"))
-			{
-				driver.findElements(By.id("com.androidsample.generalstore:id/productAddCart")).get(i).click();
-				System.out.println("Add to cart button is clicked");
-				break;
-			}
-			
-		}
+		//int count = driver.findElements(By.id("com.androidsample.generalstore:id/productName")).size();
+		driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
+		driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
+		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.androidsample.generalstore:id/rvProductList\")).scrollIntoView(new UiSelector().textMatches(\""+"Nike Blazer Mid '77"+ "\").instance(0))"));
+		driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
+        
 		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		
 		MobileElement addTocart = driver.findElement(By.id("com.androidsample.generalstore:id/appbar_btn_cart"));
 		addTocart.click();
 		System.out.println("Product added");
+		Thread.sleep(5000L);
+		
+		
 
-	   	
-	}
+		
+		
+
+		
+		
+//		double sumOfproducts = price1 + price2;
+//		System.out.println("sum Of products"+sumOfproducts);
+		
+		
+       
+		
+      }
 	
+   
 
 
-
-	public void Test_Case_03_Functionality_Exception() {
+	public void refrun() {
 
 
 		try {
-			Test_Case_03_Functionality();
+			testref();
 	       }catch(Exception exp)
 	       {
 	    	   System.out.println(exp.getCause());
@@ -90,6 +95,5 @@ public class Test_Case_03 extends Base_class {
 	       }
 		
 	}	
-	
 
 }
