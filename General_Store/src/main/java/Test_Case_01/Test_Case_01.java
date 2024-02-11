@@ -21,9 +21,7 @@ public class Test_Case_01 extends Base_class{
 		MobileElement NameTextField = driver.findElement(By.id("com.androidsample.generalstore:id/nameField"));
 		MobileElement MaleRadiobutton = driver.findElement(By.id("com.androidsample.generalstore:id/radioMale"));
 		MobileElement FemaleRadiobutton = driver.findElement(By.id("com.androidsample.generalstore:id/radioFemale"));
-		MobileElement letsShopButton = driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop"));
-
-		MobileElement letsShopButton = driver.MobileElement("")
+		MobileElement letsShopButton = driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")); 
 		 
 	                                      
 //		MobileElement country = driver.findElement(By.xpath("*//[@text='Albenia']"));
