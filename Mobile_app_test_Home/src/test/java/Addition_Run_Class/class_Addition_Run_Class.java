@@ -14,7 +14,7 @@ class_Addition addition = new class_Addition();
 
     
 //@BeforeTest
-//public void open_App_in_Device() throws Exception sss 
+//public void open_App_in_Device() throws Exception
 //{
 //	customization.Customization_Functionality();
 //	System.out.println("app is running on device");
