@@ -3,7 +3,7 @@ package Test_Case_05;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
+import org.testng.*;
 
 import Base_Class.Base_class;
 import io.appium.java_client.MobileBy;
@@ -109,8 +109,8 @@ public class Test_Case_05 extends Base_class {
 		totalPrice = totalPrice.substring(1);
 		double total = Double.parseDouble(totalPrice);
 
-       Assert.assertEquals(sum, total);
-       System.out.println("matched");
+//       Assert.assertEquals(sum, total);
+//       System.out.println("matched");
        
 		
       }

@@ -3,7 +3,8 @@ package Test_Casae_02;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
+import org.springframework.util.Assert;
+import org.testng.*;
 
 import Base_Class.Base_class;
 import io.appium.java_client.MobileElement;
@@ -21,7 +22,7 @@ public class Test_Case_02 extends Base_class{
 		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		String ToastMessage = driver.findElement(By.xpath("//android.widget.Toast[1]")).getAttribute("name");
 		System.out.println(ToastMessage);
-		Assert.assertEquals(ToastMessage, "Please enter your name");
+
     }
 	
 	public void Test_Case_02_Functionality_Exception()

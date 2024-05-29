@@ -3,7 +3,7 @@ package Test_Case_01;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
+import org.testng.*;
 
 import Base_Class.Base_class;
 import io.appium.java_client.MobileBy;
