@@ -4,12 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LongPressGesture extends BasicClass {
 
     @Test
-    public void AppiumBasicTest() throws InterruptedException {
+    public void LongPressOnButtonTest() throws InterruptedException {
 
         driver.findElement(AppiumBy.accessibilityId("Views")).click();
         System.out.println("View Button Clicked");
@@ -25,5 +26,11 @@ public class LongPressGesture extends BasicClass {
         ((JavascriptExecutor) driver).executeScript("mobile: longClickGesture", ImmutableMap.of("elementId", ((RemoteWebElement)ele).getId(),"duration",2000));
 
         Thread.sleep(5000);
+
+        String menuText = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"android:id/title\" and @text=\"Sample menu\"]")).getText();
+        Assert.assertEquals(menuText, "Sample menu");
+        Assert.assertTrue(driver.findElement(By.id("android:id/content")).isDisplayed());
+
+
     }
 }
