@@ -32,5 +32,6 @@ public class LongPressGesture extends BasicClass {
         Assert.assertTrue(driver.findElement(By.id("android:id/content")).isDisplayed());
 
 
+
     }
 }
